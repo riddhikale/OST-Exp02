@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 int main()
@@ -9,7 +10,7 @@ int main()
     cout << "Enter first number: ";
     cin >> num1;
 
-    cout << "Enter operator (+, -, *, /): ";
+    cout << "Enter operator (+, -, *, /,%): ";
     cin >> op;
 
     cout << "Enter second number: ";
@@ -17,10 +18,29 @@ int main()
 
     switch (op)
     {
-    case '+':
-        cout << "Result = " << num1 + num2;
-        break;
+        case '+':
+            cout << "Result = " << num1 + num2;
+            break;
 
-    case '-':
-        cout << "Result = " << num1 - num2;
-        break;
+        case '-':
+            cout << "Result = " << num1 - num2;
+            break;
+        
+        case '*':
+            cout << "Result = " << num1 * num2;
+            break;
+        
+        case '/':
+            if ( num2 != 0){
+                cout << "Result = " << num1/num2;
+            }
+            else {
+                cout << "Numbers cant be divided by zero";
+            }
+            break;
+        
+        default:
+            cout << "Invalid operator";
+    }
+    return 0;
+}
