@@ -10,7 +10,7 @@ int main()
     cout << "Enter first number: ";
     cin >> num1;
 
-    cout << "Enter operator (+, -, *, /,%): ";
+    cout << "Enter operator (+, -, *, /, %): ";
     cin >> op;
 
     cout << "Enter second number: ";
@@ -32,7 +32,16 @@ int main()
         
         case '/':
             if ( num2 != 0){
-                cout << "Result = " << num1/num2;
+                cout << "Result = " << num1 / num2;
+            }
+            else {
+                cout << "Numbers cant be divided by zero";
+            }
+            break;
+
+        case '%':
+            if ( num2 != 0){
+                cout << "Result = " << fmod (num1 , num2);
             }
             else {
                 cout << "Numbers cant be divided by zero";
